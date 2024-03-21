@@ -39,13 +39,23 @@ public class Fraction {
 
    public static void main (String args[]) {
       try {
+    	  int numerator = 1;
+    	  int denominator = 3;
+    	  System.out.println("running correct task");
+    	  if (args.length == 2) {
+        	  numerator = Integer.parseInt(args[0]);
+    		  denominator = Integer.parseInt(args[1]);
+    	  } else if (args.length == 1) {
+    		  numerator = Integer.parseInt(args[0]);
+    	  }
+
          // create a new instance
          // Fraction *frac = [[Fraction alloc] init];
          Fraction frac = new Fraction();
 
          // set the values
-         frac.setNumerator(1);
-         frac.setDenominator(3);
+         frac.setNumerator(numerator);
+         frac.setDenominator(denominator);
 
          // print it
          System.out.print("The fraction is: ");
